@@ -15,5 +15,22 @@
   <!-- Estilos principales -->
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 
+  <!-- Toggle modo oscuro/claro -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      toggle.addEventListener('click', function() {
+        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      });
+    });
+  </script>
+
   {% feed_meta %} {% seo %}
 </head>

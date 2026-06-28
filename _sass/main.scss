@@ -505,3 +505,35 @@ code {
     font-size: 1.1rem;
   }
 }
+
+/* ============================================
+   Tema claro / oscuro
+   ============================================ */
+[data-theme="light"] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e2e8f0;
+  --bg-card: #ffffff;
+  --text-primary: #0a0e17;
+  --text-secondary: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #cbd5e1;
+}
+
+/* ============================================
+   Theme toggle button
+   ============================================ */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  transition: background var(--transition), color var(--transition);
+}
+
+.theme-toggle:hover {
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
