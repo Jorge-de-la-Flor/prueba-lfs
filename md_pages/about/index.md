@@ -7,7 +7,7 @@ title: Sobre mí — FrostCore | Jorge de la Flor
 
 ## Perfil profesional
 
-Arquitecto de software y desarrollador de sistemas especializado en infraestructura cloud, sistemas embebidos y tooling de lenguajes. Creador de **Apider**, **Pyperanto** y **OMNI-PY** — tres plataformas que resuelven problemas de portabilidad, automatización y generación de código.
+Arquitecto de software y desarrollador de sistemas especializado en infraestructura cloud, sistemas embebidos y tooling de lenguajes. Creador de **Apider**, **Pyperantio** y **OMNI-PY** — tres plataformas que resuelven problemas de portabilidad, automatización y generación de código.
 
 Los principios arquitectónicos que subyacen a estos proyectos están formalizados como el **Modelo Agnóstico (AMP)** en mi libro en preparación: *The Agnostic Engineer: Architecture Beyond Infrastructure*.
 
@@ -22,7 +22,7 @@ Combino una formación en **International Business** con experiencia práctica e
 
 - **Apider**: Runtime multi-tenant serverless en Azure Functions, publicado en PyPI. Implementa aislamiento por ContextVar, cifrado Fernet para credenciales, servidor MCP stateless para integración con agentes IA, y facturación Paddle. 61 pruebas de integración — todas pasando en CI.
 
-- **Pyperanto**: Tooling propietario para generación de código firmware embebido. Soporte para 4+ familias de MCUs con emisión automática de código a partir de modelos de configuración hardware-independientes. (Detalles técnicos en reserva — IP filing en progreso.)
+- **Pyperantio**: Tooling propietario para generación de código firmware embebido. Soporte para 4+ familias de MCUs con emisión automática de código a partir de modelos de configuración hardware-independientes. (Detalles técnicos en reserva — IP filing en progreso.)
 
 - **OMNI-PY**: Transpilador de Python a múltiples lenguajes (Java, Go, JavaScript). Capa AST en Python y TypeTracker en Rust (vía FFI PyO3) para inferencia de tipos y análisis de nulabilidad. Emite código idiomático y compilable.
 
@@ -58,7 +58,7 @@ La capa AST de Python ingiere código fuente como nodos semánticos, no como tex
 
 ## Publicaciones y ponencias
 
-- **Libro en preparación:** *The Agnostic Engineer: Architecture Beyond Infrastructure* — Jorge A. de la Flor. Formaliza el *Agnosticismo por Transformación* como principio arquitectónico unificado; Apider, Pyperanto y OMNI-PY como casos de estudio.
+- **Libro en preparación:** *The Agnostic Engineer: Architecture Beyond Infrastructure* — Jorge A. de la Flor. Formaliza el *Agnosticismo por Transformación* como principio arquitectónico unificado; Apider, Pyperantio y OMNI-PY como casos de estudio.
 - **Ponencia (jun 2026):** *"Building a Multi-Tenant Python Runtime on Azure Functions"* — Microsoft Build 2026 Community Event · Azure User Group Latam · IDAT Lima.
 
 ---

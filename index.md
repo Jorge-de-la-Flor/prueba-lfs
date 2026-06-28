@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Jorge de la Flor — Software Architect & Systems Developer
+title: Jorge de la Flor — Software Architect & Protocol Developer
 ---
 
 <div class="profile-hero">
   <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Jorge de la Flor" class="profile-avatar" onerror="this.style.display='none'">
   
   <h1 class="profile-name">Jorge de la Flor</h1>
-  <p class="profile-title" style="font-size: 1.1rem; font-weight: 400;">Software Architect & Systems Developer</p>
+  <p class="profile-title" style="font-size: 1.1rem; font-weight: 400;">Software Architect & Protocol Developer</p>
   <p class="profile-title" style="font-weight: 300; color: var(--text-muted); font-size: 0.95rem;">
-    Cloud-agnostic · Language Engineering · Embedded Architectures
+    Embedded Systems · Cyber-Physical Systems · Language Engineering
   </p>
   
-  <!-- TU ESLOGAN DESTACADO -->
+  <!-- ESLOGAN -->
   <p style="font-size: 1.3rem; font-weight: 600; color: var(--accent-rust); margin: 0.5rem 0 0.2rem; letter-spacing: -0.02em;">
     “Piensa en Python, potencia en Rust.”
   </p>
@@ -24,7 +24,7 @@ title: Jorge de la Flor — Software Architect & Systems Developer
     <span class="tech-badge python"><i class="fab fa-python"></i> Python</span>
     <span class="tech-badge cpp"><i class="fas fa-microchip"></i> C/C++</span>
     <span class="tech-badge embedded"><i class="fas fa-microchip"></i> Embedded</span>
-    <span class="tech-badge ml"><i class="fas fa-code-branch"></i> Language Engineering</span>
+    <span class="tech-badge ml"><i class="fas fa-code-branch"></i> Protocol Engineering</span>
   </div>
   
   <div class="social-links">
@@ -39,71 +39,75 @@ title: Jorge de la Flor — Software Architect & Systems Developer
 ## Sobre mí
 
 <div style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
-  <p><strong>Arquitecto de software y desarrollador de sistemas</strong> especializado en infraestructura cloud-agnóstica, sistemas embebidos y tooling de lenguajes. Creador de <strong>Apider</strong>, <strong>Pyperanto</strong> y <strong>OMNI-PY</strong> — tres plataformas que resuelven problemas de portabilidad, automatización y generación de código.</p>
+  <p><strong>Arquitecto de software y desarrollador de protocolos</strong> especializado en la convergencia entre el mundo digital y el físico. Diseño la lógica de alto nivel que define cómo se comunican los sistemas, mientras bajo al metal para optimizar cada ciclo en MCUs como ESP32, STM32 y RP2040.</p>
   
-  <p>Los principios arquitectónicos que unifican estos proyectos están formalizados como el <strong>Modelo Agnóstico (AMP)</strong> en mi libro en preparación: <em>The Agnostic Engineer: Architecture Beyond Infrastructure</em>.</p>
+  <p>Creador de <strong>Apider</strong>, <strong>Pyperantio</strong> y <strong>OMNI-PY</strong> — tres plataformas que resuelven problemas de portabilidad, automatización y generación de código. Los principios que las unifican están formalizados como el <strong>Modelo Agnóstico (AMP)</strong> en mi libro en preparación: <em>The Agnostic Engineer: Architecture Beyond Infrastructure</em>.</p>
   
   <p>Combino una formación en <strong>International Business</strong> con experiencia práctica en ingeniería de software. He sido ponente invitado en <strong>Microsoft Build 2026</strong> y en <strong>Azure User Group Latam</strong>.</p>
 </div>
 
-<p style="margin-top: 1.5rem;">
-  <a href="{{ '/md_pages/about/' | relative_url }}" class="cta-link">
-    Conoce mi trayectoria completa →
-  </a>
-</p>
+<div style="text-align: right; margin-top: 0.5rem;">
+  <a href="{{ '/md_pages/about/' | relative_url }}" class="cta-link">Ver más →</a>
+</div>
 
 ---
 
-## Proyectos destacados {#proyectos}
+## Servicios
+
+<div class="card-grid">
+  <div class="card">
+    <h3 class="card-title"><i class="fas fa-building" style="color: #4fc3f7;"></i> Consultoría</h3>
+    <p class="card-desc">Asesoramiento en arquitectura de software, diseño de protocolos, sistemas embebidos y CPS. Desde la estrategia hasta la implementación.</p>
+  </div>
+  
+  <div class="card">
+    <h3 class="card-title"><i class="fas fa-code" style="color: #8b5cf6;"></i> Desarrollo a medida</h3>
+    <p class="card-desc">Soluciones personalizadas en Python, Rust y C/C++: firmware, herramientas CLI, backend, transpiladores y protocolos de comunicación.</p>
+  </div>
+  
+  <div class="card">
+    <h3 class="card-title"><i class="fas fa-graduation-cap" style="color: #f59e0b;"></i> Formación técnica</h3>
+    <p class="card-desc">Workshops y mentoría para equipos: arquitectura de software, Rust embedded, Python avanzado, diseño de protocolos y buenas prácticas.</p>
+  </div>
+  
+  <div class="card">
+    <h3 class="card-title"><i class="fas fa-flask" style="color: #34d399;"></i> Investigación</h3>
+    <p class="card-desc">Exploración de nuevas fronteras en arquitectura agnóstica, ingeniería de lenguajes, protocolos abiertos y sistemas distribuidos.</p>
+  </div>
+</div>
+
+<div style="text-align: right; margin-top: 0.5rem;">
+  <a href="{{ '/md_pages/services/' | relative_url }}" class="cta-link">Ver todos los servicios →</a>
+</div>
+
+---
+
+## Proyectos destacados
 
 <div class="card-grid">
   <div class="card">
     <h3 class="card-title"><i class="fas fa-cloud" style="color: #4fc3f7;"></i> Apider SDK</h3>
-    <p class="card-desc">
-      Runtime multi-tenant serverless en Azure Functions. Publicado en PyPI (<code>pip install apider</code>). 
-      Aislamiento por ContextVar, cifrado Fernet, servidor MCP stateless y facturación con Paddle. 
-      <strong>61 tests</strong> en CI.
-    </p>
-    <a href="https://pypi.org/project/apider" class="card-link" target="_blank">Ver en PyPI →</a>
+    <p class="card-desc">Runtime multi-tenant serverless en Azure Functions. Publicado en PyPI. Aislamiento por ContextVar, cifrado Fernet, servidor MCP stateless y facturación Paddle. <strong>61 tests</strong> en CI.</p>
   </div>
   
   <div class="card">
     <h3 class="card-title"><i class="fas fa-microchip" style="color: #DEA584;"></i> Pyperantio</h3>
-    <p class="card-desc">
-      Tooling propietario para generación de código firmware embebido. 
-      Soporte para <strong>4+ familias de MCUs</strong> con emisión automática de código 
-      a partir de modelos de configuración hardware-independientes.
-    </p>
-    <span style="font-size: 0.8rem; color: var(--text-muted);">🔒 IP filing en progreso</span>
+    <p class="card-desc">Tooling propietario para generación de código firmware embebido. Soporte para <strong>4+ familias de MCUs</strong> con emisión automática de código a partir de modelos hardware-independientes. 🔒 IP filing.</p>
   </div>
   
   <div class="card">
     <h3 class="card-title"><i class="fas fa-code" style="color: #8b5cf6;"></i> OMNI-PY</h3>
-    <p class="card-desc">
-      Transpilador de Python a múltiples lenguajes (Java, Go, JavaScript). 
-      Capa AST en Python + <strong>TypeTracker en Rust</strong> (PyO3 FFI) que realiza 
-      inferencia de tipos y análisis de nulabilidad.
-    </p>
+    <p class="card-desc">Transpilador de Python a Java, Go y JavaScript. Capa AST en Python + <strong>TypeTracker en Rust</strong> (PyO3) que realiza inferencia de tipos y análisis de nulabilidad.</p>
   </div>
 </div>
 
----
-
-## Filosofía arquitectónica
-
-<div style="background: var(--bg-card); border-left: 4px solid var(--accent-rust); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
-  <p style="font-weight: 500; font-size: 1.1rem; margin-bottom: 0.5rem;">
-    <i class="fas fa-book" style="color: var(--accent-rust); margin-right: 0.5rem;"></i>
-    <strong>The Agnostic Engineer: Architecture Beyond Infrastructure</strong>
-  </p>
-  <p style="color: var(--text-secondary); margin-bottom: 0;">
-    Formaliza el principio de <strong>"Agnosticismo por Transformación"</strong> como principio arquitectónico unificado, aplicado en tres dominios: <strong>cloud</strong> (Apider), <strong>embedded</strong> (Pyperanto) y <strong>language tooling</strong> (OMNI-PY).
-  </p>
+<div style="text-align: right; margin-top: 0.5rem;">
+  <a href="{{ '/md_pages/projects/' | relative_url }}" class="cta-link">Ver todos los proyectos →</a>
 </div>
 
 ---
 
-## Stack Tecnológico {#stack}
+## Stack Tecnológico
 
 <div style="text-align: center; margin: 1.5rem 0;">
   <p style="font-weight: 500; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">
@@ -115,7 +119,7 @@ title: Jorge de la Flor — Software Architect & Systems Developer
     <span class="tech-badge rust"><i class="fas fa-cog"></i> Rust</span>
     <span class="tech-badge cpp"><i class="fas fa-microchip"></i> C/C++</span>
     <span class="tech-badge embedded"><i class="fas fa-microchip"></i> Embedded</span>
-    <span class="tech-badge ml"><i class="fas fa-code-branch"></i> Language Engineering</span>
+    <span class="tech-badge ml"><i class="fas fa-code-branch"></i> Protocol Engineering</span>
     <span class="tech-badge" style="border-color: #4fc3f7; color: #4fc3f7;"><i class="fas fa-cloud"></i> Azure</span>
     <span class="tech-badge" style="border-color: #f59e0b; color: #f59e0b;"><i class="fas fa-lock"></i> Security</span>
   </div>
@@ -125,16 +129,54 @@ title: Jorge de la Flor — Software Architect & Systems Developer
   </p>
 </div>
 
+<div style="text-align: right; margin-top: 0.5rem;">
+  <a href="{{ '/md_pages/stack/' | relative_url }}" class="cta-link">Ver stack completo →</a>
+</div>
+
 ---
 
-## ¿Colaboramos?
+## Blog
 
-Busco oportunidades de <strong>investigación</strong> en arquitectura agnóstica, ingeniería de lenguajes y sistemas distribuidos, así como proyectos de <strong>consultoría</strong> y <strong>desarrollo</strong>.
+{% assign latest_post = site.posts | sort: 'date' | reverse | first %}
+{% if latest_post %}
+  <div style="border-left: 3px solid var(--accent-rust); padding-left: 1.2rem; margin: 1rem 0;">
+    <p style="color: var(--text-muted); font-size: 0.85rem;">Último artículo · {{ latest_post.date | date: "%d/%m/%Y" }}</p>
+    <h3 style="margin: 0.2rem 0;"><a href="{{ latest_post.url | relative_url }}" style="color: var(--text-primary);">{{ latest_post.title }}</a></h3>
+    <p style="color: var(--text-secondary);">{{ latest_post.excerpt | strip_html | truncatewords: 25 }}</p>
+    <a href="{{ latest_post.url | relative_url }}" class="cta-link">Leer más →</a>
+  </div>
+{% else %}
+  <p style="color: var(--text-muted);">Próximamente nuevos artículos.</p>
+{% endif %}
 
-📩 <strong>Escríbeme a <a href="mailto:{{ site.author.email }}" style="color: var(--accent-rust);">{{ site.author.email }}</a></strong>
+<div style="text-align: right; margin-top: 0.5rem;">
+  <a href="{{ '/md_pages/blog/' | relative_url }}" class="cta-link">Ver todos los posts →</a>
+</div>
 
-<p style="margin-top: 1.5rem; text-align: center;">
-  <a href="mailto:{{ site.author.email }}" class="cta-button">
-    <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Contactar ahora
-  </a>
+---
+
+## Charlas y Eventos
+
+<div style="border-left: 3px solid var(--accent-python); padding-left: 1.2rem; margin: 1rem 0;">
+  <p style="color: var(--text-muted); font-size: 0.85rem;">🔊 Microsoft Build 2026 · Azure User Group Latam</p>
+  <p style="color: var(--text-secondary);"><strong>"Building a Multi-Tenant Python Runtime on Azure Functions"</strong> — Ponencia invitada en IDAT Lima, Perú (Junio 2026).</p>
+</div>
+
+<div style="text-align: right; margin-top: 0.5rem;">
+  <a href="{{ '/md_pages/talks/' | relative_url }}" class="cta-link">Ver todas las charlas →</a>
+</div>
+
+---
+
+## Contacto
+
+<p style="font-size: 1.05rem; color: var(--text-secondary);">
+  ¿Tienes un proyecto en mente o buscas consultoría? Hablemos.
 </p>
+
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+  <a href="mailto:{{ site.author.email }}" class="cta-button" style="display: inline-block; padding: 0.6rem 1.5rem; background: var(--accent-rust); color: #fff; border-radius: 50px; font-weight: 600; text-decoration: none;">
+    <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Email
+  </a>
+  <a href="{{ '/md_pages/contact/' | relative_url }}" class="cta-link" style="align-self: center;">Ver más →</a>
+</div>
