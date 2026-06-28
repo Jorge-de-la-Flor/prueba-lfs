@@ -44,7 +44,7 @@ Coordiné operaciones de importación end-to-end, diseñé iniciativas de automa
 
 Runtime multi-tenant serverless que expone Email, Telegram, Discord, Slack, Google Sheets, HTTP, Webhooks y CloudScheduler a través de un SDK Python limpio. Innovaciones clave: aislamiento multi-tenant con ContextVar, cifrado Fernet de credenciales en tránsito, arquitectura cliente-ligero/servidor-rápido (protección IP), servidor MCP stateless para orquestación de agentes IA y facturación Paddle con control de excesos. Suite de 61 pruebas de integración.
 
-### Pyperanto — Tooling propietario para firmware embebido
+### Pyperantio — Tooling propietario para firmware embebido
 Python · Rust · Sistemas embebidos
 
 Tooling interno para generación de código firmware en 4+ familias de MCUs, basado en emisión automática de código a partir de modelos de configuración hardware-independientes. Reduce drásticamente las reescrituras de HAL al portar firmware entre plataformas. Detalles técnicos en reserva — IP filing en progreso.
