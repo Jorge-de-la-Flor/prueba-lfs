@@ -11,6 +11,12 @@ title: Jorge de la Flor — Software Architect & Systems Developer
   <p class="profile-title" style="font-weight: 300; color: var(--text-muted); font-size: 0.95rem;">
     Cloud-agnostic · Language Engineering · Embedded Architectures
   </p>
+  
+  <!-- TU ESLOGAN DESTACADO -->
+  <p style="font-size: 1.3rem; font-weight: 600; color: var(--accent-rust); margin: 0.5rem 0 0.2rem; letter-spacing: -0.02em;">
+    “Piensa en Python, potencia en Rust.”
+  </p>
+  
   <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">aka FrostCore</p>
   
   <div class="tech-badges">
@@ -62,7 +68,7 @@ title: Jorge de la Flor — Software Architect & Systems Developer
   </div>
   
   <div class="card">
-    <h3 class="card-title"><i class="fas fa-microchip" style="color: #DEA584;"></i> Pyperanto</h3>
+    <h3 class="card-title"><i class="fas fa-microchip" style="color: #DEA584;"></i> Pyperantio</h3>
     <p class="card-desc">
       Tooling propietario para generación de código firmware embebido. 
       Soporte para <strong>4+ familias de MCUs</strong> con emisión automática de código 
