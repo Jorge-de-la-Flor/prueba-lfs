@@ -1,19 +1,17 @@
 ---
 layout: default
-title: FrostCore | Jorge de la Flor — Software Architect & Systems Developer
+title: Jorge de la Flor — Software Architect & Systems Developer
 ---
 
 <div class="profile-hero">
   <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Jorge de la Flor" class="profile-avatar" onerror="this.style.display='none'">
   
-  <h1 class="profile-name">FrostCore</h1>
-  <p class="profile-title" style="font-size: 1.1rem; font-weight: 400;">Jorge A. de la Flor</p>
-  <p class="profile-title" style="font-weight: 400; color: var(--text-secondary);">
-    Software Architect & Systems Developer
-  </p>
+  <h1 class="profile-name">Jorge de la Flor</h1>
+  <p class="profile-title" style="font-size: 1.1rem; font-weight: 400;">Software Architect & Systems Developer</p>
   <p class="profile-title" style="font-weight: 300; color: var(--text-muted); font-size: 0.95rem;">
     Cloud-agnostic · Language Engineering · Embedded Architectures
   </p>
+  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">aka FrostCore</p>
   
   <div class="tech-badges">
     <span class="tech-badge rust"><i class="fas fa-cog"></i> Rust</span>
@@ -101,18 +99,23 @@ title: FrostCore | Jorge de la Flor — Software Architect & Systems Developer
 
 ## Stack Tecnológico {#stack}
 
-<div style="text-align: center; margin-bottom: 1rem;">
-  <p style="font-weight: 500; font-size: 1.1rem; color: var(--text-secondary);">
+<div style="text-align: center; margin: 1.5rem 0;">
+  <p style="font-weight: 500; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">
     <strong>Lenguajes principales:</strong> Python · Rust · C/C++
   </p>
-  <p style="font-weight: 400; font-size: 0.95rem; color: var(--text-muted);">
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">Azure Functions</span>
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">AST</span>
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">PyO3</span>
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">ESP32/STM32</span>
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">MQTT</span>
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">Docker</span>
-    <span style="display: inline-block; margin: 0.3rem 0.5rem; padding: 0.2rem 0.8rem; border-radius: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">CI/CD</span>
+  
+  <div class="tech-badges" style="justify-content: center; gap: 0.6rem;">
+    <span class="tech-badge python"><i class="fab fa-python"></i> Python</span>
+    <span class="tech-badge rust"><i class="fas fa-cog"></i> Rust</span>
+    <span class="tech-badge cpp"><i class="fas fa-microchip"></i> C/C++</span>
+    <span class="tech-badge embedded"><i class="fas fa-microchip"></i> Embedded</span>
+    <span class="tech-badge ml"><i class="fas fa-code-branch"></i> Language Engineering</span>
+    <span class="tech-badge" style="border-color: #4fc3f7; color: #4fc3f7;"><i class="fas fa-cloud"></i> Azure</span>
+    <span class="tech-badge" style="border-color: #f59e0b; color: #f59e0b;"><i class="fas fa-lock"></i> Security</span>
+  </div>
+  
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem;">
+    <strong>Además:</strong> AST · PyO3 · MCP · Polars · PostgreSQL · SQLite · Docker · CI/CD · RTOS · UART, SPI, I²C, MQTT
   </p>
 </div>
 
