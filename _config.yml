@@ -1,0 +1,42 @@
+# Configuración del sitio
+title: Jorge de la Flor - Software Architect & Systems Developer
+description: Software Architect & Systems Developer · Cloud-agnostic · Language Engineering · Embedded Architectures
+url: ""  # Cambia por tu dominio cuando esté en producción
+baseurl: ""
+
+# Autor
+author:
+  name: Jorge Aurelio de la Flor Argandona
+  email: frostcore@jafa.dev
+  github: Jorge-de-la-Flor
+  linkedin: jorge-de-la-flor
+
+# Redes sociales
+social:
+  github: Jorge-de-la-Flor
+  linkedin: jorge-de-la-flor
+  linktree: https://linktr.ee/frost_core
+
+# Configuración de Jekyll
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
