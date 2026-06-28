@@ -1,8 +1,8 @@
 # Configuración del sitio
 title: FrostCore | Jorge de la Flor — Software Architect & Systems Developer
 description: Software Architect & Systems Developer · Cloud-agnostic · Language Engineering · Embedded Architectures
-url: "https://jafa.dev/prueba-lfs/"
-baseurl: ""
+url: "https://jafa.dev"
+baseurl: "/prueba-lfs"
 
 # Autor
 author:
