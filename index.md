@@ -6,7 +6,7 @@ title: Jorge de la Flor — Software Architect & Protocol Developer
 <div class="profile-hero">
   <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Jorge de la Flor" class="profile-avatar" onerror="this.style.display='none'">
   
-  <h1 class="profile-name">Jorge de la Flor</h1>
+  <h1 class="profile-name">Jorge Aurelio de la Flor Argandoña</h1>
   <p class="profile-title" style="font-size: 1.1rem; font-weight: 400;">Software Architect & Protocol Developer</p>
   <p class="profile-title" style="font-weight: 300; color: var(--text-muted); font-size: 0.95rem;">
     Embedded Systems · Cyber-Physical Systems · Language Engineering
