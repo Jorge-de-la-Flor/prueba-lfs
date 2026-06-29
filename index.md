@@ -135,35 +135,32 @@ title: Jorge de la Flor — Software Architect & Protocol Developer
 
 ---
 
-## Blog
+## Blog & Charlas
 
-{% assign latest_post = site.posts | sort: 'date' | reverse | first %}
-{% if latest_post %}
-  <div style="border-left: 3px solid var(--accent-rust); padding-left: 1.2rem; margin: 1rem 0;">
-    <p style="color: var(--text-muted); font-size: 0.85rem;">Último artículo · {{ latest_post.date | date: "%d/%m/%Y" }}</p>
-    <h3 style="margin: 0.2rem 0;"><a href="{{ latest_post.url | relative_url }}" style="color: var(--text-primary);">{{ latest_post.title }}</a></h3>
-    <p style="color: var(--text-secondary);">{{ latest_post.excerpt | strip_html | truncatewords: 25 }}</p>
-    <a href="{{ latest_post.url | relative_url }}" class="cta-link">Leer más →</a>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0;">
+  
+  <!-- Blog -->
+  <div style="border-left: 3px solid var(--accent-rust); padding-left: 1.2rem;">
+    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">📝 Blog</h3>
+    {% assign latest_post = site.posts | sort: 'date' | reverse | first %}
+    {% if latest_post %}
+      <p style="color: var(--text-muted); font-size: 0.85rem;">Último artículo · {{ latest_post.date | date: "%d/%m/%Y" }}</p>
+      <h4 style="margin: 0.2rem 0;"><a href="{{ latest_post.url | relative_url }}" style="color: var(--text-primary);">{{ latest_post.title }}</a></h4>
+      <p style="color: var(--text-secondary); font-size: 0.95rem;">{{ latest_post.excerpt | strip_html | truncatewords: 20 }}</p>
+    {% else %}
+      <p style="color: var(--text-muted);">Próximamente nuevos artículos.</p>
+    {% endif %}
+    <a href="{{ '/md_pages/posts/' | relative_url }}#blog" class="cta-link" style="font-size: 0.9rem;">Ver todos los posts →</a>
   </div>
-{% else %}
-  <p style="color: var(--text-muted);">Próximamente nuevos artículos.</p>
-{% endif %}
 
-<div style="text-align: right; margin-top: 0.5rem;">
-  <a href="{{ '/md_pages/blog/' | relative_url }}" class="cta-link">Ver todos los posts →</a>
-</div>
+  <!-- Charlas -->
+  <div style="border-left: 3px solid var(--accent-python); padding-left: 1.2rem;">
+    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">🎤 Charlas</h3>
+    <p style="color: var(--text-muted); font-size: 0.85rem;">Último evento · Junio 2026</p>
+    <p style="color: var(--text-secondary); font-size: 0.95rem;"><strong>"Building a Multi-Tenant Python Runtime on Azure Functions"</strong> — Microsoft Build 2026</p>
+    <a href="{{ '/md_pages/posts/' | relative_url }}#talks" class="cta-link" style="font-size: 0.9rem;">Ver todas las charlas →</a>
+  </div>
 
----
-
-## Charlas y Eventos
-
-<div style="border-left: 3px solid var(--accent-python); padding-left: 1.2rem; margin: 1rem 0;">
-  <p style="color: var(--text-muted); font-size: 0.85rem;">🔊 Microsoft Build 2026 · Azure User Group Latam</p>
-  <p style="color: var(--text-secondary);"><strong>"Building a Multi-Tenant Python Runtime on Azure Functions"</strong> — Ponencia invitada en IDAT Lima, Perú (Junio 2026).</p>
-</div>
-
-<div style="text-align: right; margin-top: 0.5rem;">
-  <a href="{{ '/md_pages/talks/' | relative_url }}" class="cta-link">Ver todas las charlas →</a>
 </div>
 
 ---

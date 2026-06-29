@@ -20,7 +20,7 @@ bundle exec jekyll serve
 - _config.yml — Configuración del sitio
 - index.md — Página principal
 - _posts/ — Entradas del blog
-- md_pages/ — Páginas estáticas (About, Services, Projects, Stack, Blog, Talks, Contact)
+- md_pages/ — Páginas estáticas (About, Services, Projects, Stack, Posts, Contact)
 
 ## Despliegue
 

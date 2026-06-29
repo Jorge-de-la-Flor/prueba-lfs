@@ -537,3 +537,88 @@ code {
   color: var(--text-primary);
   background: var(--bg-secondary);
 }
+
+/* ============================================
+   Nuevos estilos para Blog & Charlas
+   ============================================ */
+
+/* Títulos con degradado (como en tu vieja web) */
+.profile-name,
+h1,
+.post-item h3 a,
+.talk-item h3,
+.card-title,
+.nav-brand {
+  background: var(--accent-gradient, linear-gradient(135deg, #3776ab 0%, #ce422b 50%, #00599c 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Excepción para enlaces dentro de títulos (no queremos que se vean transparentes) */
+.post-item h3 a {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tarjetas de posts y charlas */
+.post-item,
+.talk-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+}
+
+.post-item:last-child,
+.talk-item:last-child {
+  border-bottom: none;
+}
+
+.post-category {
+  display: inline-block;
+  background: var(--bg-secondary);
+  padding: 0.1rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  margin-right: 0.3rem;
+}
+
+/* Grid de blog y charlas en la home */
+@media (max-width: 700px) {
+  .index-blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mejora de sombras y bordes en tarjetas */
+.card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Ajuste de colores para el modo claro */
+[data-theme="light"] {
+  --accent-gradient: linear-gradient(135deg, #3776ab 0%, #ce422b 50%, #00599c 100%);
+}
+
+/* Ajuste para el nav-brand (evita que se aplique el degradado dos veces) */
+.nav-brand {
+  background: none !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+.nav-brand .brand-icon {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
