@@ -28,9 +28,15 @@ title: Jorge de la Flor — Software Architect & Protocol Developer
   </div>
   
   <div class="social-links">
-    <a href="https://github.com/{{ site.social.github }}" class="social-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/{{ site.social.linkedin }}" class="social-link" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     <a href="mailto:{{ site.author.email }}" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://linkedin.com/in/{{ site.social.linkedin }}" class="social-link" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/{{ site.social.github }}" class="social-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="{{ site.social.linktree }}" class="social-link" title="Linktree" target="_blank" ><i class="fas fa-link"></i></a>
+    {% if site.social.sessionize %}
+    <a href="{{ site.social.sessionize }}" class="social-link" title="Sessionize" target="_blank" ><i class="fas fa-calendar-alt"></i></a>
+
+    
+    
   </div>
 </div>
 
