@@ -15,12 +15,12 @@ Aquí encontrarás mis artículos técnicos y las charlas que he impartido en ev
 {% if posts.size == 0 %}
   <p style="color: var(--text-muted);">Próximamente nuevos artículos. ¡Vuelve pronto!</p>
 {% else %}
-  <div class="post-list">
+  <div class="posts-grid">
     {% for post in posts %}
-    <div class="post-item">
-      <h3><a href="{{ post.url | relative_url }}" style="color: var(--text-primary);">{{ post.title }}</a></h3>
+    <div class="post-card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p style="color: var(--text-muted); font-size: 0.85rem;">
-        {{ post.date | date: "%d/%m/%Y" }} · 
+        <i class="far fa-calendar-alt"></i> {{ post.date | date: "%d/%m/%Y" }} · 
         {% for category in post.categories %}
           <span class="post-category">{{ category }}</span>
         {% endfor %}
@@ -40,7 +40,7 @@ Aquí encontrarás mis artículos técnicos y las charlas que he impartido en ev
 
   <div class="talk-item">
     <h3>Microsoft Build 2026 Community Event — Azure User Group Latam</h3>
-    <p style="color: var(--text-muted); font-size: 0.85rem;">📅 IDAT Lima, Perú · Junio 2026</p>
+    <p class="talk-date"><i class="far fa-calendar-alt"></i> IDAT Lima, Perú · Junio 2026</p>
     <p style="color: var(--text-secondary);"><strong>"Building a Multi-Tenant Python Runtime on Azure Functions"</strong></p>
     <p style="color: var(--text-secondary); font-size: 0.95rem;">
       Ponencia invitada donde compartí la arquitectura y lecciones aprendidas al desarrollar <strong>Apider</strong>, un runtime serverless multi-tenant con aislamiento por ContextVar, cifrado Fernet, servidor MCP stateless y facturación Paddle.

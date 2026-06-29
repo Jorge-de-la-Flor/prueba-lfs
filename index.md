@@ -6,7 +6,7 @@ title: Jorge de la Flor — Software Architect & Protocol Developer
 <div class="profile-hero">
   <img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Jorge de la Flor" class="profile-avatar" onerror="this.style.display='none'">
   
-  <h1 class="profile-name">Jorge Aurelio de la Flor Argandoña</h1>
+  <h1 class="profile-name">Jorge de la Flor</h1>
   <p class="profile-title" style="font-size: 1.1rem; font-weight: 400;">Software Architect & Protocol Developer</p>
   <p class="profile-title" style="font-weight: 300; color: var(--text-muted); font-size: 0.95rem;">
     Embedded Systems · Cyber-Physical Systems · Language Engineering
@@ -137,30 +137,27 @@ title: Jorge de la Flor — Software Architect & Protocol Developer
 
 ## Blog & Charlas
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0;">
-  
-  <!-- Blog -->
-  <div style="border-left: 3px solid var(--accent-rust); padding-left: 1.2rem;">
-    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">📝 Blog</h3>
+<div class="blog-talks-preview">
+  <div class="preview-block">
+    <h3><i class="fas fa-pen-fancy"></i> Último artículo</h3>
     {% assign latest_post = site.posts | sort: 'date' | reverse | first %}
     {% if latest_post %}
-      <p style="color: var(--text-muted); font-size: 0.85rem;">Último artículo · {{ latest_post.date | date: "%d/%m/%Y" }}</p>
-      <h4 style="margin: 0.2rem 0;"><a href="{{ latest_post.url | relative_url }}" style="color: var(--text-primary);">{{ latest_post.title }}</a></h4>
-      <p style="color: var(--text-secondary); font-size: 0.95rem;">{{ latest_post.excerpt | strip_html | truncatewords: 20 }}</p>
+      <p class="preview-date">{{ latest_post.date | date: "%d/%m/%Y" }}</p>
+      <h4><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a></h4>
+      <p>{{ latest_post.excerpt | strip_html | truncatewords: 20 }}</p>
+      <a href="{{ '/md_pages/posts/' | relative_url }}#blog" class="cta-link">Ver todos los posts →</a>
     {% else %}
-      <p style="color: var(--text-muted);">Próximamente nuevos artículos.</p>
+      <p>Próximamente nuevos artículos.</p>
     {% endif %}
-    <a href="{{ '/md_pages/posts/' | relative_url }}#blog" class="cta-link" style="font-size: 0.9rem;">Ver todos los posts →</a>
   </div>
-
-  <!-- Charlas -->
-  <div style="border-left: 3px solid var(--accent-python); padding-left: 1.2rem;">
-    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.2rem;">🎤 Charlas</h3>
-    <p style="color: var(--text-muted); font-size: 0.85rem;">Último evento · Junio 2026</p>
-    <p style="color: var(--text-secondary); font-size: 0.95rem;"><strong>"Building a Multi-Tenant Python Runtime on Azure Functions"</strong> — Microsoft Build 2026</p>
-    <a href="{{ '/md_pages/posts/' | relative_url }}#talks" class="cta-link" style="font-size: 0.9rem;">Ver todas las charlas →</a>
+  
+  <div class="preview-block">
+    <h3><i class="fas fa-microphone-alt"></i> Última charla</h3>
+    <p class="preview-date">Junio 2026</p>
+    <h4>Microsoft Build 2026 — Azure User Group Latam</h4>
+    <p>"Building a Multi-Tenant Python Runtime on Azure Functions"</p>
+    <a href="{{ '/md_pages/posts/' | relative_url }}#talks" class="cta-link">Ver todas las charlas →</a>
   </div>
-
 </div>
 
 ---

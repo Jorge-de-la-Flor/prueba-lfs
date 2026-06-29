@@ -1,11 +1,10 @@
 /* ============================================
-   VARIABLES Y RESET
+   Variables & Reset
    ============================================ */
 :root {
   --bg-primary: #0a0e17;
   --bg-secondary: #111927;
   --bg-card: #141e2b;
-  --bg-card-hover: #1a2335;
   --text-primary: #e8edf5;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
@@ -17,14 +16,11 @@
   --accent-embedded: #00b894;
   --accent-ml: #8b5cf6;
 
-  --gradient-accent: linear-gradient(135deg, #3776ab 0%, #ce422b 50%, #00599c 100%);
-
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --radius: 12px;
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   --transition: 0.25s ease;
 }
 
@@ -62,7 +58,7 @@ img {
 }
 
 /* ============================================
-   CONTAINER
+   Container
    ============================================ */
 .container {
   max-width: 960px;
@@ -71,7 +67,7 @@ img {
 }
 
 /* ============================================
-   HEADER / NAV
+   Header / Navigation
    ============================================ */
 .site-header {
   padding: 1rem 0 2rem;
@@ -100,17 +96,7 @@ img {
 .nav-brand .brand-icon {
   display: inline-block;
   font-size: 1.1rem;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.nav-alias {
-  font-weight: 300;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-left: 0.3rem;
+  color: var(--accent-rust);
 }
 
 .nav-links {
@@ -119,7 +105,6 @@ img {
   gap: 1.8rem;
   font-size: 0.95rem;
   font-weight: 500;
-  align-items: center;
 }
 
 .nav-links a {
@@ -135,7 +120,7 @@ img {
 }
 
 /* ============================================
-   FOOTER
+   Footer
    ============================================ */
 .site-footer {
   margin-top: 4rem;
@@ -151,20 +136,6 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
-}
-
-.footer-tagline {
-  font-weight: 300;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-.footer-tagline::before {
-  content: "“";
-  color: var(--accent-rust);
-}
-.footer-tagline::after {
-  content: "”";
-  color: var(--accent-rust);
 }
 
 .footer-links {
@@ -184,7 +155,7 @@ img {
 }
 
 /* ============================================
-   HERO
+   Profile Hero
    ============================================ */
 .profile-hero {
   text-align: center;
@@ -198,7 +169,7 @@ img {
   object-fit: cover;
   margin: 0 auto 1.2rem;
   border: 3px solid var(--border-color);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow);
   background: var(--bg-secondary);
 }
 
@@ -207,7 +178,7 @@ img {
   font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 0.3rem;
-  background: var(--gradient-accent);
+  background: linear-gradient(135deg, #e8edf5 0%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -227,7 +198,7 @@ img {
 }
 
 /* ============================================
-   BADGES
+   Tech Badges
    ============================================ */
 .tech-badges {
   display: flex;
@@ -309,7 +280,7 @@ img {
 }
 
 /* ============================================
-   SOCIAL LINKS
+   Social Links
    ============================================ */
 .social-links {
   display: flex;
@@ -341,33 +312,23 @@ img {
 }
 
 /* ============================================
-   HEADINGS
+   Headings
    ============================================ */
-h1, h2, h3, h4 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-}
-
-h1 {
-  font-size: 2.25rem;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
-}
-
 h2 {
   font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin: 2.5rem 0 1.2rem;
   padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
 }
 
 h3 {
   font-size: 1.2rem;
+  font-weight: 600;
   margin: 1.5rem 0 0.5rem;
+  color: var(--text-primary);
 }
 
 p {
@@ -376,7 +337,7 @@ p {
 }
 
 /* ============================================
-   CARDS
+   Card Grid (proyectos destacados)
    ============================================ */
 .card-grid {
   display: grid;
@@ -400,7 +361,7 @@ p {
 .card:hover {
   border-color: #2a3a4e;
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: var(--shadow);
 }
 
 .card-title {
@@ -437,172 +398,7 @@ p {
 }
 
 /* ============================================
-   BLOG & CHARLAS PREVIEW (HOME)
-   ============================================ */
-.blog-talks-preview {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 1.5rem 0;
-}
-
-.preview-block {
-  border-left: 3px solid var(--accent-rust);
-  padding-left: 1.2rem;
-}
-
-.preview-block:last-child {
-  border-left-color: var(--accent-python);
-}
-
-.preview-block h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-.preview-block h3 i {
-  color: var(--accent-rust);
-  margin-right: 0.5rem;
-}
-.preview-block:last-child h3 i {
-  color: var(--accent-python);
-}
-
-.preview-date {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-bottom: 0.2rem;
-}
-
-.preview-block h4 {
-  font-size: 1.05rem;
-  margin: 0.2rem 0;
-}
-.preview-block h4 a {
-  color: var(--text-primary);
-}
-.preview-block h4 a:hover {
-  color: var(--accent-rust);
-}
-
-.preview-block p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-/* ============================================
-   BLOG POST (PÁGINA INDIVIDUAL)
-   ============================================ */
-.blog-post {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.post-meta {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.post-date i {
-  margin-right: 0.3rem;
-}
-
-.post-category {
-  display: inline-block;
-  background: var(--bg-secondary);
-  padding: 0.1rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
-  margin-right: 0.3rem;
-}
-
-.post-content {
-  line-height: 1.8;
-  color: var(--text-secondary);
-}
-.post-content h2, .post-content h3 {
-  margin-top: 2rem;
-  color: var(--text-primary);
-}
-.post-content code {
-  font-family: var(--font-mono);
-  background: var(--bg-secondary);
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-.post-content pre {
-  background: var(--bg-secondary);
-  padding: 1rem;
-  border-radius: var(--radius);
-  overflow-x: auto;
-  border: 1px solid var(--border-color);
-}
-
-.post-footer {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
-}
-
-/* ============================================
-   PÁGINA "BLOG & CHARLAS"
-   ============================================ */
-.posts-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.post-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  transition: border-color var(--transition), transform var(--transition),
-    box-shadow var(--transition);
-}
-
-.post-card:hover {
-  border-color: #2a3a4e;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hover);
-}
-
-.post-card h3 {
-  margin-top: 0;
-}
-.post-card h3 a {
-  color: var(--text-primary);
-}
-.post-card h3 a:hover {
-  color: var(--accent-rust);
-}
-
-.talk-item {
-  border-left: 3px solid var(--accent-python);
-  padding-left: 1.2rem;
-  margin-bottom: 2rem;
-}
-.talk-item h3 {
-  margin-top: 0;
-}
-.talk-item .talk-date {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-/* ============================================
-   CTA
+   CTA Link
    ============================================ */
 .cta-link {
   display: inline-block;
@@ -619,6 +415,9 @@ p {
   color: var(--text-primary);
 }
 
+/* ============================================
+   Botón CTA grande
+   ============================================ */
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2.5rem;
@@ -638,24 +437,90 @@ p {
   box-shadow: 0 4px 20px rgba(222, 88, 70, 0.3);
 }
 
+code {
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--accent-python);
+}
+
 /* ============================================
-   TEMA CLARO
+   Responsive
+   ============================================ */
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+
+  .profile-title {
+    font-size: 0.95rem;
+  }
+
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .tech-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================
+   Tema claro / oscuro
    ============================================ */
 [data-theme="light"] {
   --bg-primary: #f0f4f8;
   --bg-secondary: #e2e8f0;
   --bg-card: #ffffff;
-  --bg-card-hover: #f7fafc;
   --text-primary: #0a0e17;
   --text-secondary: #1e293b;
   --text-muted: #64748b;
   --border-color: #cbd5e1;
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
-   THEME TOGGLE
+   Theme toggle button
    ============================================ */
 .theme-toggle {
   background: none;
@@ -673,57 +538,3 @@ p {
   background: var(--bg-secondary);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 700px) {
-  .nav {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.8rem;
-  }
-  .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem 1.4rem;
-    font-size: 0.9rem;
-  }
-  .profile-name {
-    font-size: 1.8rem;
-  }
-  .profile-title {
-    font-size: 0.95rem;
-  }
-  .profile-avatar {
-    width: 100px;
-    height: 100px;
-  }
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  body {
-    padding: 0 1rem;
-  }
-  .blog-talks-preview {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-name {
-    font-size: 1.5rem;
-  }
-  .tech-badge {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.7rem;
-  }
-  .social-link {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
-}
