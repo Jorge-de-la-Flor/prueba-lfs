@@ -772,3 +772,52 @@ h1, h2, h3, .profile-name {
     font-size: 0.85rem;
   }
 }
+
+/* ============================================
+   TÍTULOS CENTRADOS Y DEGRADADO
+   ============================================ */
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Asegurar que los títulos de página en todas las páginas estén centrados */
+.page-title,
+.md-pages h1 {
+  text-align: center;
+}
+
+/* ============================================
+   FOOTER TAGLINE (ESLOGAN ROJIZO)
+   ============================================ */
+.footer-tagline {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--accent-rust) !important; /* Fuerza el color rojizo */
+}
+
+/* Ajuste para el modo claro (mantiene el color) */
+[data-theme="light"] .footer-tagline {
+  color: var(--accent-rust) !important;
+}
+
+/* ============================================
+   BADGES: Protocol Engineering (reemplaza Language Engineering)
+   ============================================ */
+.tech-badge.ml {
+  border-color: var(--accent-ml);
+  color: #b794f4;
+}
+.tech-badge.ml:hover {
+  border-color: var(--accent-ml);
+  color: #e8edf5;
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.2);
+}
+/* Si usas la clase "protocol" en lugar de "ml", ajústalo */
